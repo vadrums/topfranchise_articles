@@ -1,0 +1,48 @@
+@media screen and (max-width: 1024px){
+	header nav.new_top_menu {
+		max-width: 824px;
+	}
+	header .logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+	header .logo img {
+		max-width: 170px;
+		width: 170px;
+	}
+	header .logo p {
+		display: none;
+	}
+	.search_block {
+   		width: 400px;
+	}
+	.search_form {
+		width: 400px;
+	}
+	.block_search {
+		width: 400px;
+	}
+	.search_input {
+		width: 400px;
+	}
+	header .top_area .tel_item {
+    	font-size: 16px;
+	}
+	header .top_menu .item {
+		font-size: 12.5px;
+	}
+	nav {
+		max-width: 650px;
+	}
+	nav .nav_link {
+		font-size: 12px;
+	}
+	.quiz_span {
+		display: none;
+	}
+	.main {
+		margin-top: 189px;
+		padding: 0;
+	}
+}
