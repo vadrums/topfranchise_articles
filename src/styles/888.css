@@ -1,0 +1,9 @@
+@media screen and (max-width: 888px){
+	.tel_item {
+		font-size: 14px;
+	}
+	.search_block, .block_search, .search_form, .search_input {
+   		width: 350px;
+	}
+	
+}

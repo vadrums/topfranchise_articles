@@ -4,6 +4,8 @@
   "description": "simple template with handlebars",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
     "page1": "node generators/pages/page1.js"
   },
   "author": "",
@@ -11,5 +13,13 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
