@@ -1,0 +1,65 @@
+@media screen and (max-width: 999px){
+	.main {
+		margin-top: 186px;
+	}
+	header .logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	header .logo img {
+		width: 170px;
+	}
+	header .logo p {
+		display: none;
+	}
+	.search_block, .search_form, .search_input, .block_search {
+   		width: 350px;
+	}
+	.tel_item {
+    	font-size: 16px;
+	}
+	header .top_menu .item {
+		font-size: 12.5px;
+	}
+	nav {
+		width: 650px;
+	}
+	nav .nav_link {
+		font-size: 12px;
+	}
+	.quiz_span {
+		display: none;
+	}
+	.quiz_wrapper {
+		display: flex;
+		width: 40px;
+		height: 36px;
+		padding: 10px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		flex-shrink: 0;
+	}
+	.quiz_wrapper a {
+		font-size: 24px;
+	}
+	.calendar {
+		width: 650px;
+		height: 635px;
+	}
+	.dayofweek {
+		gap: 44px;
+	}
+	.calendar_date {
+		width: 45px;
+		height: 45px;
+	}
+	.calendar_date p,a {
+		font-size: 20px;
+	}
+	.calendar_row {
+		gap: 30px;
+	}
+}
