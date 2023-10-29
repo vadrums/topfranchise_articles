@@ -22437,7 +22437,9 @@ footer {
 
 /* Blog Article Styles */
 
-
+.blog-article-user__name {
+  word-wrap: break-word;
+}
 
 .blog-article-links-block {
   border-radius: 8px;

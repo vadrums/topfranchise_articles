@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="assets/css/swiper.css">
+  <link rel="stylesheet" href="assets/css/ui.css">
+  <link rel="stylesheet" href="assets/css/blog-article.css">
 </head>
 
 <body class="blog-article">
@@ -108,13 +110,15 @@
     </section>
     <section class="blog-article__section blog-article__section-info blog-article__section-info_top content-blog">
       <div class="blog-article-user">
-        <div class="blog-article-user__img-container">
-          <img class="blog-article-user__img" src="./assets/img/author.png"
-            alt="Фотография женьщины в очках с каштановыми волосами">
+        <div class="blog-article-user__container-left">
+          <div class="blog-article-user__img-container">
+            <img class="blog-article-user__img" src="./assets/img/author.png"
+              alt="Фотография женьщины в очках с каштановыми волосами">
+          </div>
         </div>
         <div class="blog-article-user__info">
           <div class="blog-article-user__role"><span>Автор</span></div>
-          <div class="blog-article-user__name"><span>Ольга Иванова</span></p>
+          <div class="blog-article-user__name"><span>Ольга Константинопольская</span></p>
           </div>
         </div>
       </div>
@@ -283,12 +287,13 @@
             небольшой опыт в бизнесе и хотели учиться.
           </p>
         </div>
-        <div class="blog-article-links-block uk-mt-40 uk-mt_m-25 uk-mb-40 uk-mb_m-25">
-          <div class="pop-tags like-tags uk-mt-0 uk-mt_m-0">
+        <div class="blog-article-links-block ui-mt-40 ui-mt_m-25 ui-mb-40 ui-mb_m-25">
+          <div class="pop-tags like-tags ui-mt-0 ui-mt_m-0">
             <div class="blog-article-links-block__title">
-              <img class="blog-article-links-block__icon" src="./assets/img/links_smile.png"> <div class="blog-article-links-block__text">Интересен данный бизнес! Хочу получить</span></div>
+              <img class="blog-article-links-block__icon" src="./assets/img/links_smile.png">
+              <div class="blog-article-links-block__text">Интересен данный бизнес! Хочу получить</span></div>
             </div>
-            <div class="links-flex  uk-mt-20 uk-mt_m-15">
+            <div class="links-flex  ui-mt-20 ui-mt_m-15">
               <a href="#" class="blog-article-links-block__link">Бизнес-план для моего города</a>
               <a href="#" class="blog-article-links-block__link">Консультацию</a>
               <a href="#" class="blog-article-links-block__link">Финансовую модель</a>
@@ -585,7 +590,7 @@
             </form>
           </div>
         </div>
-        <div class="blog-article-content-best uk-mt-40 uk-mt_m-25">
+        <div class="blog-article-content-best ui-mt-40 ui-mt_m-25">
           <div class="blog-article-content-best__title">
             Подборка лучших франшиз
           </div>
@@ -640,7 +645,7 @@
         </div>
       </div>
 
-      <div class="blog-article__section-content-sidebar side-cont">
+      <div class="blog-article-content-sidebar side-cont">
         <div class="pop-tags" id="pop-tags">
           <h4>
             <img src="assets/img/fire.png" alt="">
@@ -728,6 +733,29 @@
 
           <a href="#" class="btn-look">Посмотреть все франшизы</a>
         </div>
+
+        <div class="blog-article-recomended-articles sidebar-block">
+          <div class="blog-article-readmore-articles__container">
+            <div class="readmore-article">
+              <div class="readmore-article__img-container">
+                <figure class="readmore-article__img-figure">
+                  <picture class="readmore-article__img-picture">
+                    <source srcset="./assets/img/img-readmore-1.png" media="(max-width: 600px)">
+                    <img src="./assets/img/img-readmore-1.png" alt="Различная выпечка" class="readmore-article__img">
+                  </picture>
+                </figure>
+              </div>
+              <div class="readmore-article__title"><span>Читате также</span></div>
+              <div class="readmore-article__text-container">
+                <a href="" class="readmore-article__text-link">
+                  <p class="readmore-article__text"> Аптечные сети: обзор франшиз российского рынка</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -781,42 +809,51 @@
       </div>
     </div>
 
-    <div class="content-blog looked-section pt0 uk-mt-40 uk-mt_m-25">
+    <div class="blog-article-content-recent-posts base-section looked-section ui-mt-40 ui-mt_m-25 pt0 content-blog">
       <h3 class="title-block">Вы недавно читали</h3>
       <div class="looked-block">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"> <a class="new-slide" href="#">
-                <div class="new-back"> <img src="assets/img/new-slide1.png" alt="" /></div>
+        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+          aria-controls="swiper-wrapper-103da5a9edeb28484" aria-disabled="false"></div>
+        <div class="swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-103da5a9edeb28484" aria-live="polite"
+            style="transform: translate3d(0px, 0px, 0px);">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
+              style="width: 449.6px; margin-right: 24px;"> <a class="new-slide" href="#">
+                <div class="new-back"> <img src="assets/img/new-slide1.png" alt=""></div>
                 <div class="date desk-show">1 декабря</div>
                 <div class="date mob-show">1.12</div>
                 <div class="link-toward"> </div>
                 <div class="new-title">Советы для начинающих франчайзи...</div>
               </a></div>
-            <div class="swiper-slide"><a class="new-slide" href="#">
-                <div class="new-back"> <img src="assets/img/new-slide2.png" alt="" /></div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4"
+              style="width: 449.6px; margin-right: 24px;"><a class="new-slide" href="#">
+                <div class="new-back"> <img src="assets/img/new-slide2.png" alt=""></div>
                 <div class="date desk-show">1 декабря</div>
                 <div class="date mob-show">1.12</div>
                 <div class="link-toward"> </div>
                 <div class="new-title">Где взять деньги на открытие франшизы?</div>
               </a></div>
-            <div class="swiper-slide"><a class="new-slide" href="#">
-                <div class="new-back"> <img src="assets/img/new-slide3.png" alt="" /></div>
+            <div class="swiper-slide" role="group" aria-label="3 / 4" style="width: 449.6px; margin-right: 24px;"><a
+                class="new-slide" href="#">
+                <div class="new-back"> <img src="assets/img/new-slide3.png" alt=""></div>
                 <div class="date desk-show">1 декабря</div>
                 <div class="date mob-show">1.12</div>
                 <div class="link-toward"> </div>
                 <div class="new-title">Что такое франшиза простыми словами...</div>
               </a></div>
-            <div class="swiper-slide"> <a class="new-slide" href="#">
-                <div class="new-back"> <img src="assets/img/new-slide1.png" alt="" /></div>
+            <div class="swiper-slide" role="group" aria-label="4 / 4" style="width: 449.6px; margin-right: 24px;"> <a
+                class="new-slide" href="#">
+                <div class="new-back"> <img src="assets/img/new-slide1.png" alt=""></div>
                 <div class="date desk-show">1 декабря</div>
                 <div class="date mob-show">1.12</div>
                 <div class="link-toward"> </div>
                 <div class="new-title">Советы для начинающих франчайзи...</div>
               </a></div>
           </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+          aria-controls="swiper-wrapper-103da5a9edeb28484" aria-disabled="false"></div>
       </div>
     </div>
 
@@ -827,6 +864,7 @@
   <script src="assets/js/jquery.fancybox.min.js"></script>
   <script src="assets/js/swiper.min.js"></script>
   <script src="assets/js/app.min.js"></script>
+  <script src="assets/js/article-detail.js"></script>
 </body>
 
 </html>
