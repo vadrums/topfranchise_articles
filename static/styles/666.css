@@ -1,0 +1,41 @@
+@media screen and (max-width: 666px){
+	.form_inputs {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+	.sub_input {
+		display: flex;
+		width: 320px;
+		padding: 10px;
+		align-items: flex-start;
+		gap: 10px;
+	}
+	.form_conf {
+		display: flex;
+		flex-wrap: wrap;
+		width: 238px;
+		align-items: flex-start;
+		gap: 11px;
+	}
+	.form_conf span {
+		width: 212px;
+		flex-shrink: 0;
+	}
+	.shader {
+		height: 962px;
+	}
+	.sub_form p:before {
+		content: "Все ";
+	}
+	.sub_form p {
+		width: auto;
+	}
+	.search_block {
+		width: calc(100% - 120px);
+	}
+	.search_form, .search_input, .block_search {
+		width: 100%;
+	}
+}

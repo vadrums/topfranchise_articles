@@ -1,0 +1,40 @@
+@media screen and (max-width: 1210px){
+	nav {
+		max-width: 600px;
+	}
+	nav .nav_link {
+		font-size: 14px;
+	}
+	header .logo {
+		padding-top: 0;
+	}
+	nav {
+		max-width: 600px;
+	}
+	.tel_item {
+		font-size: 16px;
+	}
+	.container, .navigation {
+		padding: 0 15px;
+	}
+	.sub_input {
+		width: 230px;
+	}
+	.sub_form_outer {
+		width: 100%;
+	}
+	.form_conf {
+		width: 100%;
+		flex-wrap: nowrap!important;
+	}
+	.form_inputs {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	.sub_input, .sub_button {
+		margin-top: 15px;
+	}
+	.shader {
+		height: 800px;
+	}
+}
