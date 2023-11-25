@@ -21,3 +21,11 @@ topfranchise.ru article page markup
 4. Run the page script using Node.js to generate the HTML file for that specific page. See example in package.json scripts
 
 Check the output/ directory to find the generated HTML file for your page (e.g., output/page1/index.html).
+
+## UPDATE:
+
+To generate specific template you need to run command: 
+`npm run generate --tname = {{template name here}}`
+
+To generate page in specific template you need to run command: 
+`npm run generate --tname = {{template name here}} {{page name}}` 

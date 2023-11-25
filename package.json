@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "simple template with handlebars",
   "main": "index.js",
+  "config" : {
+    "templates" : {
+      "blog-article" : "generators/pages/blog-article.js"
+    }
+  },
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "page1": "node generators/pages/page1.js"
+    "generate": "node %npm_package_config_templates_tname%"
   },
   "author": "",
   "license": "ISC",
