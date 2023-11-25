@@ -1,37 +1,26 @@
-//Дообавлен базовый конфиг webpack - в будущем улучшить и запустить для дальнейшей разработки
-
-const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // Точка входа для сборки проекта
-
-  output: {
-    filename: 'bundle.js', // Имя выходного файла сборки
-    path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
-  },
-
+  entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
       {
-        test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
-        use: ['style-loader', 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
       },
     ],
   },
-  
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-  ],
-
+  resolve: {
+    extensions: ['.*', '.js', '.jsx'],
+  },
+  output: {
+    path: path.resolve(__dirname, './public'),
+    filename: 'bundle.js',
+  },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'), // Каталог для статики
-    },
-    open: true, // Автоматически открывать браузер
+        directory: path.resolve(__dirname, './public')
+      }
   },
-
-  mode: 'development', // Режим сборки
 };

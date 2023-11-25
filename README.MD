@@ -22,10 +22,14 @@ topfranchise.ru article page markup
 
 Check the output/ directory to find the generated HTML file for your page (e.g., output/page1/index.html).
 
-## UPDATE:
+## UPDATE
 
-To generate specific template you need to run command: 
+To generate specific template you need to run command:
 `npm run generate --tname = {{template name here}}`
 
-To generate page in specific template you need to run command: 
-`npm run generate --tname = {{template name here}} {{page name}}` 
+To generate page in specific template you need to run command:
+`npm run generate --tname = {{template name here}} {{page name}}`
+
+## Available templates
+
+1. "blog-article-standart" - Standart template for blog article with sidebar.
