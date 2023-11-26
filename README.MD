@@ -30,6 +30,10 @@ To generate specific template you need to run command:
 To generate page in specific template you need to run command:
 `npm run generate --tname = {{template name here}} {{page name}}`
 
+To run http server use command 
+`npx http-server public`
+
 ## Available templates
 
 1. "blog-article-standart" - Standart template for blog article with sidebar.
+
