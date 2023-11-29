@@ -9,15 +9,19 @@
     }
   },
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js --mode development",
+    "react": "webpack serve --config ./webpack-react.config.js --mode development",
+    "build-react": "webpack --config ./webpack-react.config.js",
+    "generate": "node %npm_package_config_templates_blog-article%",
     "build": "webpack",
-    "generate": "node %npm_package_config_templates_tname%"
+    "dev": "webpack serve --mode development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "fs": "^0.0.1-security",
     "handlebars": "^4.7.8",
+    "html-webpack-plugin": "^5.5.0",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -27,7 +31,9 @@
     "@babel/preset-react": "^7.23.3",
     "babel-loader": "^9.1.3",
     "babel-plugin-module-resolver": "^5.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^9.0.0",
@@ -38,5 +44,10 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

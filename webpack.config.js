@@ -1,68 +1,79 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
-    mode: "development",
-    entry: path.resolve(__dirname, './src/index.js'),
-    devtool: "eval-source-map",
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader']
-            },
-            {
-                test: /\.(s(a|c)ss)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }
-        ]
-    },
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, 'src'),
-        },
-        extensions: ['.*', '.js', '.jsx'],
-    },
-    output: {
-        path: path.resolve(__dirname, './public'),
-        filename: 'bundle.js',
-    },
+const devServer = (isDev) => !isDev ? {} : {
     devServer: {
-        static: {
-            directory: path.resolve(__dirname, './public')
-        }
+        open: true,
+        hot: true,
+        port: 8080,
+    }
+};
+
+module.exports = ({ develop }) => ({
+    mode: develop ? 'development' : 'production',
+    target: 'web',
+    entry: {
+        index: path.resolve(__dirname, './srcs/index.js'),
+        blog_article: path.resolve(__dirname, './srcs/blog-article.js'),
     },
-},
-{
-    mode: "production",
-    entry: path.resolve(__dirname, './src/index.js'),
-    devtool: "source-map",
+    resolve: {
+        extensions: ['.*', '.js']
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'static'),
+        chunkFilename: '[id].[chunkhash].js'
+    },
+    plugins: [
+        // new HtmlWebpackPlugin({
+        //     template: './srcs/index.html'
+        // }),
+        new HtmlWebpackPlugin({
+            filename: 'templates/blog-article.html',
+            template: './srcs/templates/blog-article.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: './styles/main.css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                // { from: 'srcs/templates', to: 'templates/' },
+                { from: 'srcs/pages', to: 'pages/' },
+                { from: 'srcs/assets', to: 'assets/' },
+                // You can add more patterns if needed
+            ],
+        }),
+    ],
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             {
-                test: /\.(s(a|c)ss)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
+                type: 'asset/inline'
             },
             {
-                test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
-                use: {
-                    loader: 'url-loader',
-                },
+                test: /\.html$/i,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader'
+                ]
+            },
+            {
+                test: /\.scss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+                ]
             },
         ]
     },
-    resolve: {
-        extensions: ['*', '.js', '.jsx']
-    },
-    plugins: [new MiniCssExtractPlugin()],
-    output: {
-        path: path.resolve(__dirname, './public'),
-        filename: 'bundle.js',
-    },
-};
+    ...devServer(develop)
+});

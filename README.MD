@@ -25,12 +25,14 @@ Check the output/ directory to find the generated HTML file for your page (e.g.,
 ## UPDATE
 
 To generate specific template you need to run command:
-`npm run generate --tname = {{template name here}}`
+`npm run generate --tname = {{ template name here }} {{ folder }}`
 
-To generate page in specific template you need to run command:
-`npm run generate --tname = {{template name here}} {{page name}}`
+default folder - "/static"
 
-To run http server use command 
+To generate page with specific template you need to run command:
+`npm run generate --tname = {{ template name here }} {{ folder }} {{page name}}`
+
+To run http server use command
 `npx http-server public`
 
 ## Available templates
