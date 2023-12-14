@@ -112,7 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* CONTENTS SIDEBAR SHOWMORE */
-
+var accContentsSidebarShowMoreCommonContainer = document.getElementsByClassName
+("blog-article-contents-mobile__showmore");
 var accContentsSidebarShowMore = document.getElementsByClassName
   ("blog-article-contents-mobile__showmore-text_more");
 var accContentsSidebarShowLess = document.getElementsByClassName
@@ -123,7 +124,7 @@ var accContentsMinHeight = 0;
 
 if (accContentsSidebarItems.length > 5) {
   var commonContainerHPositon = accContentsSidebarItemsContainer[0].getBoundingClientRect();
-  var minHeightItemPossition = accContentsSidebarItems[5].getBoundingClientRect();
+  var minHeightItemPossition = accContentsSidebarItems[4].getBoundingClientRect();
 
   var minHeightValue = minHeightItemPossition.bottom - commonContainerHPositon.top;
 
@@ -131,6 +132,7 @@ if (accContentsSidebarItems.length > 5) {
   // accContentsSidebarShowMore[0].classList.toggle("ui-display-none"); 
 
   accContentsSidebarShowLess[0].classList.toggle("ui-display-none");
+  accContentsSidebarShowMoreCommonContainer[0].classList.toggle("ui-display-none");
 }
 // Show More
 accContentsSidebarShowMore[0].addEventListener("click", function () {
@@ -154,7 +156,7 @@ accContentsSidebarShowLess[0].addEventListener("click", function () {
   var accContentsSidebarItems = document.getElementsByClassName("blog-article-contents-sidebar__item");
   var accContentsMinHeight = 0;
   var commonContainerHPositon = accContentsSidebarItemsContainer[0].getBoundingClientRect();
-  var minHeightItemPossition = accContentsSidebarItems[5].getBoundingClientRect();
+  var minHeightItemPossition = accContentsSidebarItems[4].getBoundingClientRect();
   var minHeightValue = minHeightItemPossition.bottom - commonContainerHPositon.top;
   accContentsSidebarItemsContainer[0].style.maxHeight = minHeightValue + "px";
   accContentsSidebarShowMore[0].classList.toggle("ui-display-none");
